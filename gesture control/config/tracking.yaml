@@ -1,0 +1,29 @@
+# Tracking Configuration
+# Camera, MediaPipe, and Pinch Geometry Settings
+
+camera:
+  device_index: 0
+  capture_width: 1280
+  capture_height: 720
+  camera_fps: 60
+  inference_fps: 60
+  mirror_horizontal: true
+
+mediapipe:
+  max_num_hands: 2
+  model_complexity: 1
+  min_detection_confidence: 0.55
+  min_tracking_confidence: 0.55
+
+kinematics:
+  # Dimensionless pinch thresholds: distance(LM4, LM8) / palm_scale
+  # palm_scale = distance(LM0, LM9)
+  pinch_enter_ratio: 0.38
+  pinch_exit_ratio: 0.52
+  drag_hold_frames: 7
+  drag_grace_frames: 3
+
+  # Finger extension thresholds
+  finger_extension_ratio: 1.25
+  finger_straightness_cosine: 0.60
+  thumb_extension_ratio: 1.14

@@ -1,0 +1,41 @@
+# System & Hardware Automation Configuration
+
+system:
+  screen_fallback_width: 1920
+  screen_fallback_height: 1080
+
+interaction_box:
+  margin_x: 60
+  margin_y: 45
+  box_color: [255, 200, 0]        # BGR: Amber
+  active_color: [0, 255, 0]       # BGR: Green
+  box_thickness: 2
+
+adaptive_ema:
+  # Formula: alpha = interp(velocity, [v_slow, v_fast], [alpha_slow, alpha_fast])
+  # filtered = (1 - alpha) * previous + alpha * target
+  alpha_slow: 0.15   # Gentle smoothing at rest (suppresses hand tremor)
+  alpha_fast: 0.72   # Fluid responsiveness during ballistic movement
+  v_slow: 3.0        # px/frame threshold for slow motion
+  v_fast: 24.0       # px/frame threshold for fast motion
+
+scrolling:
+  scroll_gain: 0.22
+  wheel_delta: 120   # Standard Win32 WHEEL_DELTA unit
+  smooth_factor: 0.65
+  inertia_decay: 0.75
+  min_velocity: 0.6
+
+safety:
+  hand_loss_timeout_sec: 1.0
+  emergency_stop_keys: ["q", "escape"]
+  auto_release_on_exit: true
+
+ui:
+  show_fps: true
+  show_hud: true
+  show_confidence_meter: true
+  show_interaction_box: true
+  show_pinch_line: true
+  font_scale: 0.7
+  font_thickness: 2

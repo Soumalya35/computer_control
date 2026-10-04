@@ -1,0 +1,193 @@
+# Gestures Configuration
+# Gesture Definitions, Roles, Temporal Voting & Cooldown Timers
+
+stabilization:
+  temporal_window: 5
+  temporal_votes: 3
+  confidence_threshold: 0.65
+  candidate_threshold: 0.60
+
+gestures:
+  # ==========================================
+  # PRIMARY HAND GESTURES (Pointer / Action)
+  # ==========================================
+  primary_pointing:
+    name: "POINTING"
+    role: "PRIMARY"
+    fingers: [0, 1, 0, 0, 0]
+    action: "MOVE_MOUSE"
+    category: "mouse"
+    mode: "CONTINUOUS"
+    cooldown: 0.0
+    priority: 10
+
+  primary_pointing_relaxed:
+    name: "POINTING_RELAXED"
+    role: "PRIMARY"
+    fingers: [1, 1, 0, 0, 0]
+    action: "MOVE_MOUSE"
+    category: "mouse"
+    mode: "CONTINUOUS"
+    cooldown: 0.0
+    priority: 10
+
+  primary_pinch:
+    name: "PINCH"
+    role: "PRIMARY"
+    action: "LEFT_CLICK"
+    category: "mouse"
+    mode: "STATE_MACHINE"
+    cooldown: 0.35
+    priority: 20
+
+  primary_two_fingers_tight:
+    name: "TWO_FINGERS_TIGHT"
+    role: "PRIMARY"
+    fingers: [0, 1, 1, 0, 0]
+    action: "SCROLL_MODE"
+    category: "scroll"
+    mode: "CONTINUOUS"
+    cooldown: 0.0
+    priority: 15
+
+  primary_two_fingers_relaxed:
+    name: "TWO_FINGERS_RELAXED"
+    role: "PRIMARY"
+    fingers: [1, 1, 1, 0, 0]
+    action: "SCROLL_MODE"
+    category: "scroll"
+    mode: "CONTINUOUS"
+    cooldown: 0.0
+    priority: 15
+
+  primary_three_fingers:
+    name: "THREE_FINGERS"
+    role: "PRIMARY"
+    fingers: [0, 1, 1, 1, 0]
+    action: "ALT_TAB"
+    category: "keyboard"
+    mode: "DISCRETE"
+    cooldown: 0.80
+    priority: 30
+
+  primary_three_fingers_relaxed:
+    name: "THREE_FINGERS_RELAXED"
+    role: "PRIMARY"
+    fingers: [1, 1, 1, 1, 0]
+    action: "ALT_TAB"
+    category: "keyboard"
+    mode: "DISCRETE"
+    cooldown: 0.80
+    priority: 30
+
+  primary_four_fingers:
+    name: "FOUR_FINGERS"
+    role: "PRIMARY"
+    fingers: [0, 1, 1, 1, 1]
+    action: "TASK_VIEW"
+    category: "keyboard"
+    mode: "DISCRETE"
+    cooldown: 0.80
+    priority: 30
+
+  primary_thumb_up:
+    name: "THUMB_UP"
+    role: "PRIMARY"
+    fingers: [1, 0, 0, 0, 0]
+    action: "VOLUME_UP"
+    category: "media"
+    mode: "DISCRETE"
+    cooldown: 0.20
+    priority: 30
+
+  primary_volume_down:
+    name: "PINKY_ONLY"
+    role: "PRIMARY"
+    fingers: [0, 0, 0, 0, 1]
+    action: "VOLUME_DOWN"
+    category: "media"
+    mode: "DISCRETE"
+    cooldown: 0.20
+    priority: 30
+
+  primary_call_shaka:
+    name: "CALL_SHAKA"
+    role: "PRIMARY"
+    fingers: [1, 0, 0, 0, 1]
+    action: "PLAY_PAUSE"
+    category: "media"
+    mode: "DISCRETE"
+    cooldown: 0.60
+    priority: 30
+
+  primary_fist:
+    name: "CLOSED_FIST"
+    role: "PRIMARY"
+    fingers: [0, 0, 0, 0, 0]
+    action: "PAUSE"
+    category: "system"
+    mode: "DISCRETE"
+    cooldown: 0.80
+    priority: 50
+
+  primary_open_palm:
+    name: "OPEN_PALM"
+    role: "PRIMARY"
+    fingers: [1, 1, 1, 1, 1]
+    action: "RESUME"
+    category: "system"
+    mode: "DISCRETE"
+    cooldown: 0.80
+    priority: 50
+
+  # ==========================================
+  # SECONDARY HAND GESTURES (Auxiliary / Nav / Select)
+  # ==========================================
+  secondary_bimanual_select:
+    name: "BIMANUAL_SELECT"
+    role: "SECONDARY"
+    action: "BIMANUAL_SELECT"
+    category: "mouse"
+    mode: "STATE_MACHINE"
+    cooldown: 0.30
+    priority: 35
+
+  secondary_peace:
+    name: "SECONDARY_PEACE"
+    role: "SECONDARY"
+    fingers: [0, 1, 1, 0, 0]
+    action: "NEXT_TAB"
+    category: "keyboard"
+    mode: "DISCRETE"
+    cooldown: 0.60
+    priority: 25
+
+  secondary_three_fingers:
+    name: "SECONDARY_THREE_FINGERS"
+    role: "SECONDARY"
+    fingers: [0, 1, 1, 1, 0]
+    action: "PREVIOUS_TAB"
+    category: "keyboard"
+    mode: "DISCRETE"
+    cooldown: 0.60
+    priority: 25
+
+  secondary_open_palm:
+    name: "LEFT_OPEN_PALM"
+    role: "SECONDARY"
+    fingers: [1, 1, 1, 1, 1]
+    action: "NO_ACTION"
+    category: "system"
+    mode: "DISCRETE"
+    cooldown: 0.0
+    priority: 12
+
+  secondary_pointing:
+    name: "LEFT_POINTING"
+    role: "SECONDARY"
+    fingers: [0, 1, 0, 0, 0]
+    action: "NO_ACTION"
+    category: "mouse"
+    mode: "CONTINUOUS"
+    cooldown: 0.0
+    priority: 12

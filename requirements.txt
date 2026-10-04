@@ -1,0 +1,20 @@
+# ==============================================================================
+# Vision-Based Gesture Control - Centralized Dependencies
+# ==============================================================================
+
+# Core Computer Vision & Hand Tracking Runtime
+mediapipe==0.10.21
+opencv-python==4.13.0.92
+numpy==2.4.4
+PyYAML==6.0.3
+
+# OS Automation & System Utilities (Windows User-mode User32)
+pyautogui==0.9.54
+keyboard==0.13.5
+mouse==0.7.1
+psutil==7.2.2
+
+# Documentation, Architecture Diagrams & Report Generation
+matplotlib==3.10.9
+reportlab==5.0.1
+pillow==12.2.0
